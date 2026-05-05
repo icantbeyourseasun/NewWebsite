@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hyacinth</title>
+    <title>LoveyList</title>
     
     <style>
         body {
-            background-color: #bfecf8; /* สีพื้นหลัง (สีชมพูอ่อน) */
+            background-color: #ffe5f8; /* สีพื้นหลัง (สีชมพูอ่อน) */
             text-align: center; /* จัดทุกอย่างให้อยู่ตรงกลางจอ */
-            font-family: 'Comic Sans MS', sans-serif; /* เปลี่ยนฟอนต์ให้น่ารักๆ */
+            font-family: 'FC Lamoon', sans-serif; /* เปลี่ยนฟอนต์ให้น่ารักๆ */
         }
         
         button {
-            background-color: #629bac; /* สีปุ่ม (สีชมพู) */
-            color: white; /* สีตัวหนังสือบนปุ่ม */
+            background-color: #eed5e7; /* สีพื้นหลัง (สีชมพูอ่อน) */
+            color: rgb(0, 0, 0); /* สีตัวหนังสือบนปุ่ม */
             padding: 10px 20px; /* ทำให้ปุ่มอ้วนขึ้น (บนล่าง 10 ซ้ายขวา 20) */
             border-radius: 50px; /* ลบเหลี่ยมปุ่มให้โค้งมน */
             border: none; /* เอาขอบปุ่มสีดำๆ ออก */
@@ -23,71 +23,13 @@
         }
 
         button:hover {
-            background-color: #4a7c8c; /* สีปุ่มเมื่อเอาเมาส์ชี้ (สีชมพูเข้มขึ้น) */
+            background-color: #ffc1e5; /* สีปุ่มเมื่อเอาเมาส์ชี้ (สีชมพูเข้มขึ้น) */
             transform: scale(1.1); /* ขยายขนาดปุ่มให้ใหญ่ขึ้นนิดนึง (ว้าว!) */
-            box-shadow: 0 4px 15px rgba(62, 145, 212, 0.4); /* เพิ่มเงาเรืองแสงเท่ๆ */
+            box-shadow: 0 4px 15px rgba(255, 173, 223, 0.585); /* เพิ่มเงาเรืองแสงเท่ๆ */
             cursor: pointer; /* เปลี่ยนรูปเมาส์เป็นนิ้วจิ้ม */
         }
 
     </style>
 </head>
    
-<body>
-    <h1>"WELLCOME TO MY DEMO"</h1>
-    <p>TRY TO MOVE PONY !</p>
-    <button onclick="alert('คุณโดนหลอกแล้ว! ต้องกดปุ่มข้างล่างต่างหาก542128985')">กดฉันสิ !</button>
-    
-<br><br> <img id="myChar" src="player.png" width="100" style="position:absolute; left: 50px; top: 200px; transition: all 0.3s ease-out;">
-
-<br><br><br><br><br> 
-    <button onclick="walkRight()">เดินหน้า</button>
-    <button onclick="walkLeft()">ถอยหลัง</button>
-    <button onclick="jump()">กระโดด!</button> 
-
-    <script>
-        function walkRight() {
-            let player = document.getElementById("myChar"); 
-            
-            let currentPosition = parseInt(player.style.left); 
-            
-            player.style.left = (currentPosition + 50) + "px"; 
-
-            player.style.transform = "scaleX(1)";
-        }
-
-        function walkLeft() {
-            let player = document.getElementById("myChar"); 
-            
-            let currentPosition = parseInt(player.style.left); 
-            
-            player.style.left = (currentPosition - 50) + "px"; 
-            
-            player.style.transform = "scaleX(-1)";
-        }
-
-        function jump() {
-            let player = document.getElementById("myChar"); 
-            player.style.top = "100px"; 
-            setTimeout(function() {
-                player.style.top = "200px";
-            }, 300); 
-        }
-
-        document.addEventListener("keydown", function(event) {
-            
-            
-            if (event.key === "a" || event.key === "A") {
-                walkLeft();
-            }
-            
-            else if (event.key === "d" || event.key === "D") {
-                walkRight();
-            }
-            else if (event.key === "w" || event.key === "W") {
-                jump();
-            }
-            
-        });
-    </script>
-</body>
 </html>
